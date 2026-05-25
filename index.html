@@ -3,375 +3,538 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rhode Architecture — Elite Immersive Strategy Sample</title>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;1,9..144,100;1,9..144,200;1,9..144,300&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Rhode Skin · BRAVO Case Study</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-    :root {
-        --rhode-clay: #F2ECE4;
-        --rhode-espresso: #30221A;
-        --rhode-toast: #8A6D5E;
-        --rhode-raspberry: #542229;
-        --rhode-ribbon: #DCAEAE;
-        --bg-current: #F7F5F2;
-        --text-main: #1C1A19;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; transition: all 0.5s cubic-bezier(0.15, 1, 0.3, 1); }
-    body {
-        background-color: var(--bg-current);
-        color: var(--text-main);
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        overflow-x: hidden;
-    }
-
-    /* PREMIUM INTERACTIVE NAV */
-    .brand-nav {
-        padding: 30px 5%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid rgba(0,0,0,0.06);
-    }
-    .nav-logo {
-        font-family: 'Fraunces', serif;
-        font-weight: 200;
-        font-size: 24px;
-        letter-spacing: -1px;
-    }
-    .nav-badge {
-        font-size: 10px;
-        text-transform: uppercase;
-        letter-spacing: 4px;
-        font-weight: 700;
-        opacity: 0.6;
-    }
-
-    /* HIGH EDITORIAL HERO HEADER */
-    .lookbook-hero {
-        padding: 100px 8% 60px 8%;
-        max-width: 1200px;
-    }
-    .hero-eyebrow {
-        font-size: 11px;
-        font-weight: 800;
-        text-transform: uppercase;
-        letter-spacing: 6px;
-        color: var(--rhode-toast);
-        margin-bottom: 20px;
-    }
-    .lookbook-hero h1 {
-        font-family: 'Fraunces', serif;
-        font-weight: 100;
-        font-size: clamp(40px, 7vw, 76px);
-        line-height: 1.05;
-        letter-spacing: -3px;
-        margin-bottom: 30px;
-    }
-    .lookbook-hero h1 em {
-        font-style: italic;
-        font-weight: 300;
-    }
-
-    /* SHADE CHANGER INTERACTIVE PIPES */
-    .color-experience-vault {
-        padding: 40px 8%;
-        background: rgba(0,0,0,0.02);
-        border-top: 1px solid rgba(0,0,0,0.04);
-        border-bottom: 1px solid rgba(0,0,0,0.04);
-    }
-    .vault-title {
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-weight: 700;
-        margin-bottom: 20px;
-        opacity: 0.6;
-    }
-    .selector-row {
-        display: flex;
-        gap: 15px;
-        flex-wrap: wrap;
-    }
-    .shade-pill {
-        padding: 12px 24px;
-        border-radius: 50px;
-        border: 1px solid rgba(0,0,0,0.1);
-        cursor: pointer;
-        font-size: 12px;
-        font-weight: 600;
-        background: #FFFFFF;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-    .shade-pill:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-
-    /* DYNAMIC INTERACTIVE VISUAL GRID */
-    .lookbook-grid {
-        display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 80px;
-        padding: 100px 8%;
-        align-items: start;
-    }
-    @media(max-width: 900px) { .lookbook-grid { grid-template-columns: 1fr; gap: 40px; padding: 60px 5%; } }
-
-    .editorial-narrative-panel h2 {
-        font-family: 'Fraunces', serif;
-        font-weight: 200;
-        font-size: clamp(28px, 4vw, 44px);
-        line-height: 1.15;
-        letter-spacing: -1px;
-        margin-bottom: 24px;
-    }
-    .editorial-narrative-panel p {
-        font-size: 16px;
-        line-height: 1.75;
-        color: #33302E;
-        margin-bottom: 25px;
-        font-weight: 300;
-    }
-
-    /* THE TRUE RETAILED CONTAINER ARCHITECTURE */
-    .sculptural-product-canvas {
-        position: sticky;
-        top: 40px;
-        background: #FFFFFF;
-        border-radius: 40px;
-        padding: 60px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        box-shadow: 0 30px 70px rgba(0,0,0,0.04);
-        border: 1px solid rgba(0,0,0,0.03);
-    }
-
-    /* Accurate Rhode Rounded Ergonomic Structural Silhouette */
-    .rhode-capsule-sculpture {
-        width: 150px;
-        height: 240px;
-        background: #E5DFD9;
-        border-radius: 32px;
-        position: relative;
-        box-shadow: inset -15px -15px 30px rgba(0,0,0,0.08), 0 35px 60px rgba(0,0,0,0.12);
-        margin-bottom: 40px;
-    }
-    .rhode-capsule-sculpture::before {
-        content: '';
-        position: absolute;
-        top: 0; left: 0; right: 0; height: 100px;
-        background: #ECE6E0;
-        border-radius: 32px 32px 6px 6px;
-        border-bottom: 1px solid rgba(0,0,0,0.08);
-    }
-    .capsule-brand-stamp {
-        position: absolute;
-        bottom: 35px;
-        left: 0; right: 0; text-align: center;
-        font-family: 'Fraunces', serif;
-        font-size: 22px;
-        font-weight: 200;
-        letter-spacing: 2px;
-        color: rgba(0,0,0,0.35);
-    }
-
-    /* THE B.R.A.V.O STRATEGY MAP DISPLAY */
-    .bravo-matrix-strip {
-        background: #FFFFFF;
-        padding: 100px 8%;
-        border-top: 1px solid rgba(0,0,0,0.05);
-    }
-    .matrix-showcase-title {
-        font-family: 'Fraunces', serif;
-        font-size: 36px;
-        font-weight: 200;
-        margin-bottom: 50px;
-        letter-spacing: -1px;
-    }
-    .bravo-luxury-row {
-        display: flex;
-        padding: 40px 0;
-        border-bottom: 1px solid rgba(0,0,0,0.08);
-        gap: 40px;
-    }
-    .bravo-luxury-row:hover { background: rgba(0,0,0,0.01); padding-left: 20px; }
-    .matrix-initial {
-        font-family: 'Fraunces', serif;
-        font-size: 48px;
-        font-weight: 100;
-        color: var(--rhode-toast);
-        width: 60px;
-        flex-shrink: 0;
-    }
-    .matrix-content h3 {
-        font-size: 14px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        margin-bottom: 10px;
-        font-weight: 700;
-    }
-    .matrix-content p {
-        font-size: 15px;
-        color: #55514E;
-        font-weight: 300;
-        line-height: 1.6;
-    }
-
-    /* THE CONVERSION-TRIGGERING FOOTER ARCHITECTURE */
-    .conversion-anchor-panel {
-        background: #1C1A19;
-        color: #F7F5F2;
-        padding: 140px 8%;
-        text-align: center;
-        position: relative;
-    }
-    .conversion-anchor-panel h2 {
-        font-family: 'Fraunces', serif;
-        font-size: clamp(36px, 6vw, 58px);
-        font-weight: 100;
-        line-height: 1.1;
-        margin-bottom: 30px;
-        letter-spacing: -2px;
-    }
-    .conversion-anchor-panel p {
-        max-width: 650px;
-        margin: 0 auto 40px auto;
-        font-size: 16px;
-        opacity: 0.7;
-        font-weight: 300;
-        line-height: 1.7;
-    }
-    .premium-interview-trigger {
-        display: inline-block;
-        background: #F7F5F2;
-        color: #1C1A19;
-        padding: 22px 50px;
-        border-radius: 100px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        font-size: 12px;
-        text-decoration: none;
-        box-shadow: 0 25px 50px rgba(0,0,0,0.3);
-    }
-    .premium-interview-trigger:hover {
-        transform: translateY(-4px) scale(1.02);
-        box-shadow: 0 35px 60px rgba(0,0,0,0.4);
-    }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#FAF6F0;color:#1C1410;font-family:'Barlow',sans-serif;overflow-x:hidden}
+.cover{min-height:100vh;background:#1C1410;display:grid;grid-template-rows:auto 1fr auto;padding:0;position:relative;overflow:hidden}
+.cover-grain{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:1}
+.cover-top{padding:36px 56px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2;border-bottom:1px solid rgba(255,255,255,0.05)}
+.cover-wordmark{font-family:'Playfair Display',serif;font-size:15px;font-weight:400;letter-spacing:0.3em;color:rgba(255,255,255,0.35);text-transform:lowercase}
+.cover-tag{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:0.35em;text-transform:uppercase;color:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.08);padding:8px 16px}
+.cover-body{display:flex;flex-direction:column;justify-content:center;padding:60px 56px;position:relative;z-index:2}
+.cover-eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:0.4em;text-transform:uppercase;color:#C4735A;margin-bottom:28px;display:flex;align-items:center;gap:14px}
+.cover-eyebrow::before{content:'';width:32px;height:1px;background:#C4735A}
+.cover-h1{font-family:'Anton',sans-serif;font-size:clamp(80px,12vw,160px);line-height:0.86;letter-spacing:-0.02em;color:#fff;margin-bottom:32px}
+.cover-h1 .blush{color:#E8B4A0}
+.cover-h1 .outline{-webkit-text-stroke:2px rgba(255,255,255,0.2);color:transparent}
+.cover-desc{font-size:15px;line-height:1.9;color:rgba(255,255,255,0.35);font-weight:300;max-width:520px;margin-bottom:48px}
+.cover-bravo-row{display:flex;gap:0}
+.bravo-letter{padding:16px 24px;border:1px solid rgba(255,255,255,0.06);border-right:none;text-align:center;transition:background .3s}
+.bravo-letter:last-child{border-right:1px solid rgba(255,255,255,0.06)}
+.bravo-letter:hover{background:rgba(255,255,255,0.04)}
+.bl-char{font-family:'Anton',sans-serif;font-size:32px;letter-spacing:-0.01em;color:#fff;line-height:1;margin-bottom:4px}
+.bl-word{font-family:'Barlow Condensed',sans-serif;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.25)}
+.cover-bottom{padding:28px 56px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.05);position:relative;z-index:2}
+.cover-bottom-note{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.15)}
+.cover-scroll-line{width:60px;height:1px;background:rgba(255,255,255,0.1)}
+.rotator-section{background:#1C1410;padding:80px 56px;border-bottom:1px solid rgba(255,255,255,0.05);position:relative;overflow:hidden}
+.rotator-label{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:0.35em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:40px;display:flex;align-items:center;gap:14px}
+.rotator-label::after{content:'';flex:1;height:1px;background:rgba(255,255,255,0.06)}
+.rotator-stage{position:relative;min-height:280px;display:flex;align-items:center}
+.rotator-card{position:absolute;top:0;left:0;right:0;opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;pointer-events:none}
+.rotator-card.active{opacity:1;transform:none;position:relative;pointer-events:auto}
+.rc-product-name{font-family:'Anton',sans-serif;font-size:clamp(56px,8vw,110px);line-height:0.85;letter-spacing:-0.02em;color:#fff;margin-bottom:12px}
+.rc-shade-name{font-family:'Playfair Display',serif;font-size:22px;font-style:italic;font-weight:400;margin-bottom:20px}
+.rc-copy{font-size:15px;line-height:1.85;color:rgba(255,255,255,0.4);font-weight:300;max-width:600px;margin-bottom:28px}
+.rc-price{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:0.1em;color:#fff}
+.rc-swatch-row{display:flex;gap:8px;margin-top:20px}
+.rc-swatch{width:32px;height:32px;border-radius:50%;border:2px solid transparent;cursor:pointer;transition:transform .2s}
+.rc-swatch:hover{transform:scale(1.15)}
+.rc-swatch.active-swatch{border-color:#fff}
+.rotator-controls{display:flex;gap:0;margin-top:48px;border:1px solid rgba(255,255,255,0.08);width:fit-content}
+.rotator-btn{background:transparent;border:none;padding:12px 20px;cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-size:9px;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.3);border-right:1px solid rgba(255,255,255,0.08);transition:all .2s}
+.rotator-btn:last-child{border-right:none}
+.rotator-btn:hover,.rotator-btn.active-btn{background:rgba(255,255,255,0.05);color:#fff}
+.rotator-progress{position:absolute;bottom:0;left:0;height:1px;background:#C4735A;transition:width 4s linear}
+.bravo-section{padding:100px 56px;position:relative}
+.bravo-section::before{content:attr(data-letter);position:absolute;font-family:'Anton',sans-serif;font-size:30vw;line-height:1;color:rgba(0,0,0,0.03);top:0;right:-40px;letter-spacing:-0.05em;pointer-events:none}
+.section-marker{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+.sm-letter{font-family:'Anton',sans-serif;font-size:64px;line-height:1;letter-spacing:-0.02em}
+.sm-divider{width:1px;height:48px;background:rgba(0,0,0,0.12)}
+.sm-word{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:rgba(0,0,0,0.3)}
+.sm-num{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:0.2em;color:rgba(0,0,0,0.2);margin-top:2px}
+.section-h{font-family:'Anton',sans-serif;font-size:clamp(44px,6vw,80px);line-height:0.88;letter-spacing:-0.02em;margin-bottom:28px}
+.section-body{font-size:15px;line-height:1.9;color:rgba(28,20,16,0.55);font-weight:300}
+.section-body strong{color:#1C1410;font-weight:600}
+.b-section{background:#FAF6F0}
+.b-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-top:60px}
+.b-color-label{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:rgba(28,20,16,0.3);margin-bottom:16px}
+.b-color-row{display:flex;gap:0}
+.b-color-chip{flex:1;height:80px;display:flex;flex-direction:column;justify-content:flex-end;padding:10px}
+.b-chip-name{font-family:'Barlow Condensed',sans-serif;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;font-weight:600}
+.b-chip-hex{font-family:'Barlow Condensed',sans-serif;font-size:9px;letter-spacing:0.05em;margin-top:2px}
+.b-type-block{margin-top:40px}
+.b-type-sample{font-family:'Playfair Display',serif;font-size:48px;font-weight:900;color:#1C1410;line-height:1;margin-bottom:8px}
+.b-type-sample em{font-style:italic;color:#C4735A}
+.b-type-note{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(28,20,16,0.3)}
+.b-principle-list{display:grid;gap:0;margin-top:40px}
+.b-principle{padding:20px 0;border-bottom:1px solid rgba(28,20,16,0.08);display:grid;grid-template-columns:28px 1fr;gap:16px;align-items:start}
+.b-principle:last-child{border-bottom:none}
+.bp-num{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:0.1em;color:rgba(28,20,16,0.25);padding-top:2px}
+.bp-title{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#1C1410;margin-bottom:4px}
+.bp-body{font-size:13px;line-height:1.7;color:rgba(28,20,16,0.5);font-weight:300}
+.r-section{background:#1C1410}
+.r-section .section-h{color:#fff}
+.r-section .section-body{color:rgba(255,255,255,0.4)}
+.r-section .section-body strong{color:#fff}
+.r-section .sm-divider{background:rgba(255,255,255,0.1)}
+.r-section .sm-word{color:rgba(255,255,255,0.25)}
+.r-section .sm-num{color:rgba(255,255,255,0.15)}
+.r-section .sm-letter{color:#C4735A}
+.r-section::before{color:rgba(255,255,255,0.015)}
+.r-quotes{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.06);margin-top:60px}
+.r-quote-cell{background:#1C1410;padding:40px 36px}
+.r-quote-text{font-family:'Playfair Display',serif;font-size:22px;font-style:italic;font-weight:400;color:#fff;line-height:1.45;margin-bottom:16px}
+.r-quote-attr{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.25)}
+.r-manifesto{margin-top:60px;padding:48px;border:1px solid rgba(255,255,255,0.06);position:relative}
+.r-manifesto-label{position:absolute;top:-1px;left:40px;background:#1C1410;font-family:'Barlow Condensed',sans-serif;font-size:9px;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.2);padding:0 12px}
+.r-manifesto-text{font-family:'Anton',sans-serif;font-size:clamp(28px,4vw,48px);line-height:1.05;letter-spacing:-0.01em;color:#fff}
+.r-manifesto-text .blush{color:#E8B4A0}
+.a-section{background:#FAF6F0}
+.audience-personas{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(28,20,16,0.08);margin-top:60px}
+.persona{background:#FAF6F0;padding:36px 28px}
+.persona-avatar{width:56px;height:56px;border-radius:50%;margin-bottom:20px;display:flex;align-items:center;justify-content:center;font-size:24px}
+.persona-name{font-family:'Anton',sans-serif;font-size:24px;letter-spacing:-0.01em;color:#1C1410;margin-bottom:4px;line-height:1}
+.persona-type{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#C4735A;margin-bottom:16px}
+.persona-traits{display:grid;gap:8px;margin-bottom:20px}
+.persona-trait{font-size:12px;color:rgba(28,20,16,0.55);line-height:1.5;font-weight:300;padding-left:12px;position:relative}
+.persona-trait::before{content:'';position:absolute;left:0;top:8px;width:4px;height:4px;border-radius:50%;background:#C4735A}
+.persona-buys{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(28,20,16,0.3);margin-bottom:6px}
+.persona-products{font-size:12px;color:#C4735A;font-weight:500;line-height:1.6}
+.v-section{background:#F0E8DF}
+.voice-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:60px}
+.vc-label{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:rgba(28,20,16,0.3);margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.vc-label::after{content:'';flex:1;height:1px;background:rgba(28,20,16,0.1)}
+.voice-do{display:grid;gap:12px;margin-bottom:32px}
+.voice-dont{display:grid;gap:12px}
+.vd-item{padding:16px 20px;display:flex;gap:14px;align-items:flex-start}
+.vd-icon{font-size:14px;flex-shrink:0;margin-top:2px}
+.vd-text{font-size:13px;line-height:1.6;font-weight:300}
+.vd-item.do{background:#fff;border-left:3px solid #C4735A}
+.vd-item.do .vd-text{color:rgba(28,20,16,0.7)}
+.vd-item.dont{background:rgba(28,20,16,0.04);border-left:3px solid rgba(28,20,16,0.15)}
+.vd-item.dont .vd-text{color:rgba(28,20,16,0.4)}
+.voice-personality{margin-top:40px;padding:36px;background:#1C1410}
+.vp-label{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:20px}
+.vp-traits{display:flex;flex-wrap:wrap;gap:8px}
+.vp-trait{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:0.1em;padding:8px 16px;border:1px solid rgba(255,255,255,0.1);color:#fff}
+.vp-trait.active{background:#C4735A;border-color:#C4735A}
+.o-section{background:#FAF6F0}
+.offering-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(28,20,16,0.08);margin-top:60px}
+.offering-card{background:#FAF6F0;padding:40px 32px;position:relative;overflow:hidden}
+.offering-card::before{content:attr(data-num);position:absolute;font-family:'Anton',sans-serif;font-size:120px;color:rgba(28,20,16,0.03);top:-10px;right:16px;line-height:1;letter-spacing:-0.03em}
+.oc-product{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#C4735A;margin-bottom:10px}
+.oc-name{font-family:'Anton',sans-serif;font-size:32px;letter-spacing:-0.01em;color:#1C1410;margin-bottom:8px;line-height:1}
+.oc-copy{font-size:13px;line-height:1.8;color:rgba(28,20,16,0.5);font-weight:300;margin-bottom:20px}
+.oc-shades{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.oc-shade{display:flex;align-items:center;gap:6px;padding:4px 10px;background:rgba(28,20,16,0.04)}
+.oc-shade-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.oc-shade-name{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:0.1em;color:rgba(28,20,16,0.5)}
+.oc-price{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.1em;color:#C4735A}
+.final-panel{background:#1C1410;padding:100px 56px;text-align:center;position:relative;overflow:hidden}
+.fp-watermark{position:absolute;font-family:'Anton',sans-serif;font-size:28vw;line-height:1;color:rgba(255,255,255,0.02);top:50%;left:50%;transform:translate(-50%,-50%);letter-spacing:-0.04em;pointer-events:none;white-space:nowrap}
+.fp-label{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:0.35em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:32px;position:relative;z-index:2}
+.fp-h{font-family:'Anton',sans-serif;font-size:clamp(56px,9vw,120px);line-height:0.87;letter-spacing:-0.02em;color:#fff;margin-bottom:24px;position:relative;z-index:2}
+.fp-h .blush{color:#E8B4A0}
+.fp-sub{font-size:14px;line-height:1.85;color:rgba(255,255,255,0.3);font-weight:300;max-width:500px;margin:0 auto 48px;position:relative;z-index:2}
+.fp-meta{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.15);position:relative;z-index:2}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+.rv2{transition-delay:.1s}
+.rv3{transition-delay:.2s}
+@media(max-width:900px){
+  .cover-body,.b-grid,.r-quotes,.audience-personas,.voice-grid,.offering-grid{grid-template-columns:1fr}
+  .cover-bravo-row{flex-wrap:wrap}
+  .bravo-section{padding:64px 24px}
+  .cover-body,.cover-top,.cover-bottom{padding-left:24px;padding-right:24px}
+  .rotator-section{padding:64px 24px}
+  .cover-h1{font-size:clamp(64px,16vw,120px)}
+}
 </style>
 </head>
-<body id="lookbook-body">
+<body>
 
-    <nav class="brand-nav">
-        <div class="nav-logo">joy nwaulu // strategy lookbook</div>
-        <div class="nav-badge">portfolio capsule sample No. 01</div>
-    </nav>
+<section class="cover">
+  <div class="cover-grain"></div>
+  <div class="cover-top">
+    <div class="cover-wordmark">rhode skin</div>
+    <div class="cover-tag">Brand Case Study · BRAVO Framework</div>
+  </div>
+  <div class="cover-body">
+    <div class="cover-eyebrow">Email Campaign Case Study</div>
+    <h1 class="cover-h1">
+      RHODE.<br>
+      <span class="blush">GLAZED.</span><br>
+      <span class="outline">REAL.</span>
+    </h1>
+    <p class="cover-desc">Rhode did not launch as a skincare brand. It launched as a feeling. This case study breaks down how every product, every email, every shade name earns that feeling and turns subscribers into loyalists.</p>
+    <div class="cover-bravo-row">
+      <div class="bravo-letter"><div class="bl-char">B</div><div class="bl-word">Branding</div></div>
+      <div class="bravo-letter"><div class="bl-char">R</div><div class="bl-word">Reason</div></div>
+      <div class="bravo-letter"><div class="bl-char">A</div><div class="bl-word">Audience</div></div>
+      <div class="bravo-letter"><div class="bl-char">V</div><div class="bl-word">Voice</div></div>
+      <div class="bravo-letter"><div class="bl-char">O</div><div class="bl-word">Offering</div></div>
+    </div>
+  </div>
+  <div class="cover-bottom">
+    <div class="cover-bottom-note">Scroll to explore the full case study</div>
+    <div class="cover-scroll-line"></div>
+  </div>
+</section>
 
-    <header class="lookbook-hero">
-        <p class="hero-eyebrow">DTC Brand Strategy Blueprint</p>
-        <h1 id="hero-main-title">The Architectural Framework of <em>Rhode’s</em> Hyper-Growth Velocity.</h1>
-    </header>
+<section class="rotator-section">
+  <div class="rotator-label">The Product Line</div>
+  <div class="rotator-stage">
+    <div class="rotator-progress" id="rotatorProgress" style="width:0%"></div>
+    <div class="rotator-card active" data-color="#E8B4A0">
+      <div class="rc-product-name" style="color:#E8B4A0">PEPTIDE LIP<br>TREATMENT</div>
+      <div class="rc-shade-name" style="color:#C4735A">Strawberry Glaze</div>
+      <p class="rc-copy">The one that started everything. Rhode's best-selling Peptide Lip Treatment delivers intense hydration with a glossy finish that lasts. Named after the moments you live in. Glazed. Dewy. Effortless.</p>
+      <span class="rc-price">$16</span>
+      <div class="rc-swatch-row">
+        <div class="rc-swatch active-swatch" style="background:#E8B4A0" title="Strawberry Glaze"></div>
+        <div class="rc-swatch" style="background:#D4876A" title="Espresso Yourself"></div>
+        <div class="rc-swatch" style="background:#F5CDB8" title="Salted Caramel"></div>
+        <div class="rc-swatch" style="background:#C4A882" title="Toasted Hazelnut"></div>
+        <div class="rc-swatch" style="background:#F0E0D4" title="Unfiltered"></div>
+        <div class="rc-swatch" style="background:#E8C4B8" title="Candy Floss"></div>
+      </div>
+    </div>
+    <div class="rotator-card" data-color="#F5E6D8">
+      <div class="rc-product-name" style="color:#D4A878">GLAZING<br>MILK</div>
+      <div class="rc-shade-name" style="color:#B8895A">Barrier Restore Serum</div>
+      <p class="rc-copy">A lightweight serum that gives skin that fresh-from-vacation glow. Packed with niacinamide, peptides, and hyaluronic acid. Your skin after a long weekend at the pool. That's Glazing Milk.</p>
+      <span class="rc-price">$29</span>
+      <div class="rc-swatch-row">
+        <div class="rc-swatch active-swatch" style="background:#F5E6D8" title="Original"></div>
+        <div class="rc-swatch" style="background:#EDD5C0" title="Warm Glow"></div>
+      </div>
+    </div>
+    <div class="rotator-card" data-color="#E0C8B4">
+      <div class="rc-product-name" style="color:#C4A882">BARRIER<br>RESTORE<br>CREAM</div>
+      <div class="rc-shade-name" style="color:#A07850">All Skin Types</div>
+      <p class="rc-copy">Your skin's best friend after a long week. The Barrier Restore Cream repairs and replenishes with shea butter, ceramides, and peptides. Heavy where it needs to be. Invisible where it does not.</p>
+      <span class="rc-price">$32</span>
+      <div class="rc-swatch-row">
+        <div class="rc-swatch active-swatch" style="background:#F0E4D8" title="Original"></div>
+      </div>
+    </div>
+    <div class="rotator-card" data-color="#E89898">
+      <div class="rc-product-name" style="color:#E89898">POCKET<br>BLUSH</div>
+      <div class="rc-shade-name" style="color:#C46060">Milkmaids</div>
+      <p class="rc-copy">A buildable cream blush that goes on like a second skin. Rhode's Pocket Blush fits everywhere and forgives everything. One swipe for subtle. Three for a look. Made for real life, not just the mirror.</p>
+      <span class="rc-price">$26</span>
+      <div class="rc-swatch-row">
+        <div class="rc-swatch active-swatch" style="background:#E89898" title="Milkmaids"></div>
+        <div class="rc-swatch" style="background:#D4786A" title="Parade"></div>
+        <div class="rc-swatch" style="background:#E8B4A0" title="Petal"></div>
+        <div class="rc-swatch" style="background:#C87878" title="Bitten"></div>
+        <div class="rc-swatch" style="background:#A05858" title="Fling"></div>
+      </div>
+    </div>
+    <div class="rotator-card" data-color="#C87878">
+      <div class="rc-product-name" style="color:#C87878">PEPTIDE<br>LIP TINT</div>
+      <div class="rc-shade-name" style="color:#A05858">Ribbon</div>
+      <p class="rc-copy">All the hydration of the original Peptide Lip Treatment with a wash of sheer color. Rhode's Peptide Lip Tint gives you something to reach for even on no-makeup days. Wear it alone. Layer it. Do both.</p>
+      <span class="rc-price">$18</span>
+      <div class="rc-swatch-row">
+        <div class="rc-swatch active-swatch" style="background:#C87878" title="Ribbon"></div>
+        <div class="rc-swatch" style="background:#E8A890" title="Petal"></div>
+        <div class="rc-swatch" style="background:#D4907A" title="Toast"></div>
+        <div class="rc-swatch" style="background:#A86858" title="Fig"></div>
+      </div>
+    </div>
+  </div>
+  <div class="rotator-controls">
+    <button class="rotator-btn active-btn" onclick="showProduct(0)">Lip Treatment</button>
+    <button class="rotator-btn" onclick="showProduct(1)">Glazing Milk</button>
+    <button class="rotator-btn" onclick="showProduct(2)">Barrier Cream</button>
+    <button class="rotator-btn" onclick="showProduct(3)">Pocket Blush</button>
+    <button class="rotator-btn" onclick="showProduct(4)">Lip Tint</button>
+  </div>
+</section>
 
-    <section class="color-experience-vault">
-        <p class="vault-title">Experience the Palette Edits (Click to Shift Identity System)</p>
-        <div class="selector-row">
-            <button class="shade-pill" onclick="shiftTheme('espresso', '#30221A', '#F9F6F0', 'Espresso — The Deep Rich Minimalist Architecture')">
-                <span style="width:16px; height:16px; background:#30221A; border-radius:50%;"></span> Espresso
-            </button>
-            <button class="shade-pill" onclick="shiftTheme('toast', '#8A6D5E', '#FAF5F2', 'Toast — The Editorial Rose Taupe Framework')">
-                <span style="width:16px; height:16px; background:#8A6D5E; border-radius:50%;"></span> Toast
-            </button>
-            <button class="shade-pill" onclick="shiftTheme('raspberry', '#542229', '#FDF5F6', 'Raspberry Jelly — The High-Velocity Crush Variant')">
-                <span style="width:16px; height:16px; background:#542229; border-radius:50%;"></span> Raspberry Jelly
-            </button>
-            <button class="shade-pill" onclick="shiftTheme('ribbon', '#DCAEAE', '#FAF6F6', 'Ribbon — The Translucent Kinetic Silk System')">
-                <span style="width:16px; height:16px; background:#DCAEAE; border-radius:50%;"></span> Ribbon
-            </button>
+<section class="bravo-section b-section" data-letter="B">
+  <div class="section-marker rv">
+    <div class="sm-letter" style="color:#C4735A">B</div>
+    <div class="sm-divider"></div>
+    <div class="sm-info">
+      <div class="sm-word">Branding</div>
+      <div class="sm-num">01 of 05</div>
+    </div>
+  </div>
+  <h2 class="section-h rv rv2">SOFT ON<br>THE OUTSIDE.<br>DELIBERATE<br>EVERYWHERE ELSE.</h2>
+  <div class="b-grid">
+    <div class="b-left rv">
+      <p class="section-body">Rhode does not scream. It does not have to. The brand identity is built on <strong>restraint with intention</strong>. Every touchpoint, from the packaging to the subject line of an email, carries the same quiet confidence. Blush pinks and warm nudes are not just aesthetic choices. They are a brand promise: <strong>this will feel good on your skin and in your hands.</strong><br><br>The Playfair Display serif communicates something luxurious without being cold. The lowercase "rhode" logo is disarming. It says you do not need to try hard when the product does the work.</p>
+      <div class="b-type-block">
+        <div class="b-type-sample">rhode.<br><em>glazed.</em></div>
+        <div class="b-type-note">Playfair Display · Brand Typography System</div>
+      </div>
+    </div>
+    <div class="b-right rv rv2">
+      <div class="b-color-label">Brand Color System</div>
+      <div class="b-color-row">
+        <div class="b-color-chip" style="background:#1C1410"><div class="b-chip-name" style="color:rgba(255,255,255,0.5)">Bark</div><div class="b-chip-hex" style="color:rgba(255,255,255,0.3)">#1C1410</div></div>
+        <div class="b-color-chip" style="background:#C4735A"><div class="b-chip-name" style="color:rgba(255,255,255,0.8)">Copper</div><div class="b-chip-hex" style="color:rgba(255,255,255,0.5)">#C4735A</div></div>
+        <div class="b-color-chip" style="background:#E8B4A0"><div class="b-chip-name" style="color:rgba(44,20,16,0.7)">Blush</div><div class="b-chip-hex" style="color:rgba(44,20,16,0.45)">#E8B4A0</div></div>
+        <div class="b-color-chip" style="background:#FAF6F0;border:1px solid #E8E0D8"><div class="b-chip-name" style="color:rgba(28,20,16,0.5)">Cream</div><div class="b-chip-hex" style="color:rgba(28,20,16,0.3)">#FAF6F0</div></div>
+        <div class="b-color-chip" style="background:#E8C4B8"><div class="b-chip-name" style="color:rgba(44,20,16,0.7)">Nude</div><div class="b-chip-hex" style="color:rgba(44,20,16,0.45)">#E8C4B8</div></div>
+      </div>
+      <div class="b-principle-list" style="margin-top:40px">
+        <div class="b-principle"><div class="bp-num">01</div><div><div class="bp-title">Always Skin Forward</div><div class="bp-body">Every image leads with texture and skin. The product is secondary to the feeling it creates.</div></div></div>
+        <div class="b-principle"><div class="bp-num">02</div><div><div class="bp-title">Warmth Over White</div><div class="bp-body">Cream and blush replace the clinical whites most beauty brands default to.</div></div></div>
+        <div class="b-principle"><div class="bp-num">03</div><div><div class="bp-title">Restraint as Luxury</div><div class="bp-body">Rhode does not over-design. Clean packaging, minimal copy, deliberate whitespace.</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bravo-section r-section" data-letter="R">
+  <div class="section-marker rv">
+    <div class="sm-letter">R</div>
+    <div class="sm-divider"></div>
+    <div class="sm-info">
+      <div class="sm-word">Reason for Existing</div>
+      <div class="sm-num">02 of 05</div>
+    </div>
+  </div>
+  <h2 class="section-h rv rv2" style="color:#fff">SKINCARE<br>SHOULD FEEL<br>LIKE SOMETHING<br><span style="color:#E8B4A0">YOU WANT.</span></h2>
+  <p class="section-body rv rv3" style="max-width:640px">Rhode exists because <strong>skincare got complicated</strong>. Twelve-step routines. Lab-grade ingredients with names nobody could pronounce. Products that promised everything and felt like nothing. Rhode launched in 2022 with a simple counter-proposal: a small, curated range of products that actually work and feel luxurious to use.</p>
+  <div class="r-quotes">
+    <div class="r-quote-cell rv"><div class="r-quote-text">Skincare is not a project. It is a moment you give yourself.</div><div class="r-quote-attr">Rhode Brand Voice</div></div>
+    <div class="r-quote-cell rv rv2"><div class="r-quote-text">We built what we actually wanted to use every day. Nothing more.</div><div class="r-quote-attr">Hailey Bieber, Co-founder</div></div>
+  </div>
+  <div class="r-manifesto rv">
+    <div class="r-manifesto-label">The Rhode Manifesto</div>
+    <div class="r-manifesto-text">SKIN SHOULD LOOK LIKE <span class="blush">SKIN.</span><br>DEWY. GLAZED. REAL.<br>NOT FILTERED. NOT PERFORMED.<br>JUST <span class="blush">YOURS.</span></div>
+  </div>
+</section>
+
+<section class="bravo-section a-section" data-letter="A">
+  <div class="section-marker rv">
+    <div class="sm-letter" style="color:#C4735A">A</div>
+    <div class="sm-divider"></div>
+    <div class="sm-info">
+      <div class="sm-word">Audience</div>
+      <div class="sm-num">03 of 05</div>
+    </div>
+  </div>
+  <h2 class="section-h rv rv2">THREE PEOPLE.<br>ONE FEELING.</h2>
+  <p class="section-body rv rv3" style="max-width:640px">Rhode's audience is not defined by age or income. It is defined by <strong>how they move through the world</strong>. Discerning without being pretentious. They want things that work and feel good. They share what they love. They buy again because the product earned it.</p>
+  <div class="audience-personas">
+    <div class="persona rv">
+      <div class="persona-avatar" style="background:#FADADD">🌸</div>
+      <div class="persona-name">THE GLAZER</div>
+      <div class="persona-type">Core Customer · 22 to 34</div>
+      <div class="persona-traits">
+        <div class="persona-trait">Aesthetics-first. Buys the vibe before the ingredient list.</div>
+        <div class="persona-trait">Posts her skincare shelf. Tags the brands. Drives discovery.</div>
+        <div class="persona-trait">Loyal when a brand earns it. Gone the moment it gets sloppy.</div>
+      </div>
+      <div class="persona-buys">Goes for</div>
+      <div class="persona-products">Peptide Lip Treatment · Pocket Blush · Glazing Milk</div>
+    </div>
+    <div class="persona rv rv2">
+      <div class="persona-avatar" style="background:#E8D5C4">✨</div>
+      <div class="persona-name">THE EDITOR</div>
+      <div class="persona-type">Quality Buyer · 28 to 42</div>
+      <div class="persona-traits">
+        <div class="persona-trait">Reads the ingredients. Wants results, not promises.</div>
+        <div class="persona-trait">Curates her routine ruthlessly. Only keeps what performs.</div>
+        <div class="persona-trait">Spends more on fewer things. Rhode's restraint earns her trust.</div>
+      </div>
+      <div class="persona-buys">Goes for</div>
+      <div class="persona-products">Barrier Restore Cream · Glazing Milk · Peptide Lip Tint</div>
+    </div>
+    <div class="persona rv rv3">
+      <div class="persona-avatar" style="background:#F5E6D8">🌞</div>
+      <div class="persona-name">THE GIFTER</div>
+      <div class="persona-type">Gift Buyer · 25 to 45</div>
+      <div class="persona-traits">
+        <div class="persona-trait">Buys Rhode for someone she loves. Packaging does the work.</div>
+        <div class="persona-trait">Discovered the brand through TikTok or a friend. Converts fast.</div>
+        <div class="persona-trait">High AOV. Likely to try it herself after gifting.</div>
+      </div>
+      <div class="persona-buys">Goes for</div>
+      <div class="persona-products">Peptide Lip Treatment Sets · Pocket Blush Gift Sets</div>
+    </div>
+  </div>
+</section>
+
+<section class="bravo-section v-section" data-letter="V">
+  <div class="section-marker rv">
+    <div class="sm-letter" style="color:#C4735A">V</div>
+    <div class="sm-divider" style="background:rgba(28,20,16,0.12)"></div>
+    <div class="sm-info">
+      <div class="sm-word">Voice and Personality</div>
+      <div class="sm-num">04 of 05</div>
+    </div>
+  </div>
+  <h2 class="section-h rv rv2">WARM.<br>KNOWING.<br>NEVER<br>TRYING HARD.</h2>
+  <p class="section-body rv rv3" style="max-width:640px">Rhode writes like your most put-together friend. Confident but not cold. It knows things. It shares them freely. It never lectures.</p>
+  <div class="voice-grid">
+    <div class="voice-column rv">
+      <div class="vc-label">Rhode Does This</div>
+      <div class="voice-do">
+        <div class="vd-item do"><div class="vd-icon">✓</div><div class="vd-text">Short sentences. Active voice. Confidence without explanation.</div></div>
+        <div class="vd-item do"><div class="vd-icon">✓</div><div class="vd-text">Names shades like moments. Strawberry Glaze. Salted Caramel. Toast. You can taste them.</div></div>
+        <div class="vd-item do"><div class="vd-icon">✓</div><div class="vd-text">Self-aware humor. "New flavour alert. Strawberries and cream. We know. We could not stop crying either."</div></div>
+        <div class="vd-item do"><div class="vd-icon">✓</div><div class="vd-text">Writes to one person. Not a demographic. A specific human having a specific morning.</div></div>
+      </div>
+      <div class="vc-label">Rhode Never Does This</div>
+      <div class="voice-dont">
+        <div class="vd-item dont"><div class="vd-icon">✗</div><div class="vd-text">Jargon. Peptides are mentioned but never explained like a textbook.</div></div>
+        <div class="vd-item dont"><div class="vd-icon">✗</div><div class="vd-text">Desperation. No countdown timers. No "LAST CHANCE" in all caps.</div></div>
+        <div class="vd-item dont"><div class="vd-icon">✗</div><div class="vd-text">Over-promising. "Your skin after a long weekend." Not "transform your skin in 7 days."</div></div>
+      </div>
+    </div>
+    <div class="voice-column rv rv2">
+      <div class="vc-label">Subject Line Examples</div>
+      <div class="voice-do" style="margin-bottom:0">
+        <div class="vd-item do" style="border-left-color:#E8B4A0"><div class="vd-icon">✉</div><div class="vd-text" style="font-weight:500">"new flavour alert. strawberries and cream."</div></div>
+        <div class="vd-item do" style="border-left-color:#C4735A"><div class="vd-icon">✉</div><div class="vd-text" style="font-weight:500">"your glaze era starts now."</div></div>
+        <div class="vd-item do" style="border-left-color:#E8B4A0"><div class="vd-icon">✉</div><div class="vd-text" style="font-weight:500">"we restocked. you're welcome."</div></div>
+        <div class="vd-item do" style="border-left-color:#C4735A"><div class="vd-icon">✉</div><div class="vd-text" style="font-weight:500">"five shades. one friday morning."</div></div>
+        <div class="vd-item do" style="border-left-color:#E8B4A0"><div class="vd-icon">✉</div><div class="vd-text" style="font-weight:500">"the cream your skin has been waiting for."</div></div>
+      </div>
+      <div class="voice-personality">
+        <div class="vp-label">Brand Personality Traits</div>
+        <div class="vp-traits">
+          <div class="vp-trait active">WARM</div>
+          <div class="vp-trait active">KNOWING</div>
+          <div class="vp-trait">PLAYFUL</div>
+          <div class="vp-trait active">INTIMATE</div>
+          <div class="vp-trait">ASPIRATIONAL</div>
+          <div class="vp-trait active">EFFORTLESS</div>
+          <div class="vp-trait">LUXURIOUS</div>
+          <div class="vp-trait active">REAL</div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <main class="lookbook-grid">
-        <div class="editorial-narrative-panel">
-            <h2>The Night the Grid Froze: Deconstructing Multi-Million Dollar Conversion Design</h2>
-            <p>Imagine a digital storefront perfectly frozen in time. It is exactly 12:03 PM on a Tuesday. Millions of screens across the globe are refreshing simultaneously, tracking a spinning loading wheel. To the uninitiated observer, this is a routine launch. To a high-performance copywriter, it is an exquisite study in psychological tension and operational placement.</p>
-            <p>Within five minutes, the interface cuts to a stark message: <em>sold out</em>. No red discount tags, no loud urgency banners. Rhode built a luxury empire by intentionally resolving consumer choice fatigue. True corporate velocity relies on deep positioning strategy rather than superficial design choices.</p>
-            <p>By mastering the structural layers of the BRAVO Framework and building an owned media infrastructure, Rhode successfully rewrote the rules of brand scaling and direct-response conversions.</p>
-        </div>
+<section class="bravo-section o-section" data-letter="O">
+  <div class="section-marker rv">
+    <div class="sm-letter" style="color:#C4735A">O</div>
+    <div class="sm-divider"></div>
+    <div class="sm-info">
+      <div class="sm-word">Offering</div>
+      <div class="sm-num">05 of 05</div>
+    </div>
+  </div>
+  <h2 class="section-h rv rv2">FIVE PRODUCTS.<br>ZERO FILLER.</h2>
+  <p class="section-body rv rv3" style="max-width:640px">Rhode does not have a product for everything. It has <strong>the right product for the moments that matter</strong>. Every launch is deliberate. Every shade name tells a story.</p>
+  <div class="offering-grid">
+    <div class="offering-card rv" data-num="01">
+      <div class="oc-product">Hero Product</div>
+      <div class="oc-name">PEPTIDE LIP TREATMENT</div>
+      <p class="oc-copy">The product that built the brand. Clinically tested. Nine shades deep. Every one named after a feeling. Hydrates for 24 hours.</p>
+      <div class="oc-shades">
+        <div class="oc-shade"><div class="oc-shade-dot" style="background:#E8B4A0"></div><div class="oc-shade-name">Strawberry Glaze</div></div>
+        <div class="oc-shade"><div class="oc-shade-dot" style="background:#D4876A"></div><div class="oc-shade-name">Espresso Yourself</div></div>
+        <div class="oc-shade"><div class="oc-shade-dot" style="background:#F5CDB8"></div><div class="oc-shade-name">Salted Caramel</div></div>
+        <div class="oc-shade"><div class="oc-shade-dot" style="background:#C4A882"></div><div class="oc-shade-name">Toasted Hazelnut</div></div>
+        <div class="oc-shade"><div class="oc-shade-dot" style="background:#F0E0D4"></div><div class="oc-shade-name">Unfiltered</div></div>
+      </div>
+      <div class="oc-price">$16</div>
+    </div>
+    <div class="offering-card rv rv2" data-num="02">
+      <div class="oc-product">Complexion</div>
+      <div class="oc-name">GLAZING MILK</div>
+      <p class="oc-copy">A serum that works like a filter but real. Niacinamide. Peptides. Hyaluronic acid. The product that answers the question: what is her skin doing?</p>
+      <div class="oc-shades">
+        <div class="oc-shade"><div class="oc-shade-dot" style="background:#F5E6D8"></div><div class="oc-shade-name">Original</div></div>
+        <div class="oc-shade"><div class="oc-shade-dot" style="background:#EDD5C0"></div><div class="oc-shade-name">Warm Glow</div></div>
+      </div>
+      <div class="oc-price">$29</div>
+    </div>
+    <div class="offering-card rv" data-num="03">
+      <div class="oc-product">Skin Barrier</div>
+      <div class="oc-name">BARRIER RESTORE CREAM</div>
+      <p class="oc-copy">The one you reach for after a rough week. Shea butter. Ceramides. Peptides. Skin feels like itself again by morning.</p>
+      <div class="oc-shades">
+        <div class="oc-shade"><div class="oc-shade-dot" style="background:#F0E4D8"></div><div class="oc-shade-name">Original</div></div>
+      </div>
+      <div class="oc-price">$32</div>
+    </div>
+    <div class="offering-card rv rv2" data-num="04">
+      <div class="oc-product">Color</div>
+      <div class="oc-name">POCKET BLUSH</div>
+      <p class="oc-copy">Cream blush that survives the day. Buildable from barely-there to fully flushed. Fits in every bag. Works on every skin tone.</p>
+      <div class="oc-shades">
+        <div class="oc-shade"><div class="oc-shade-dot" style="background:#E89898"></div><div class="oc-shade-name">Milkmaids</div></div>
+        <div class="oc-shade"><div class="oc-shade-dot" style="background:#D4786A"></div><div class="oc-shade-name">Parade</div></div>
+        <div class="oc-shade"><div class="oc-shade-dot" style="background:#E8B4A0"></div><div class="oc-shade-name">Petal</div></div>
+        <div class="oc-shade"><div class="oc-shade-dot" style="background:#C87878"></div><div class="oc-shade-name">Bitten</div></div>
+        <div class="oc-shade"><div class="oc-shade-dot" style="background:#A05858"></div><div class="oc-shade-name">Fling</div></div>
+      </div>
+      <div class="oc-price">$26</div>
+    </div>
+    <div class="offering-card rv" data-num="05" style="grid-column:1/-1">
+      <div class="oc-product">Lip Color</div>
+      <div class="oc-name">PEPTIDE LIP TINT</div>
+      <p class="oc-copy">All the function of the original. A wash of color on top. What you reach for when you want to look like you tried without trying. Four shades. Worn alone or layered. Always glazed.</p>
+      <div class="oc-shades">
+        <div class="oc-shade"><div class="oc-shade-dot" style="background:#C87878"></div><div class="oc-shade-name">Ribbon</div></div>
+        <div class="oc-shade"><div class="oc-shade-dot" style="background:#E8A890"></div><div class="oc-shade-name">Petal</div></div>
+        <div class="oc-shade"><div class="oc-shade-dot" style="background:#D4907A"></div><div class="oc-shade-name">Toast</div></div>
+        <div class="oc-shade"><div class="oc-shade-dot" style="background:#A86858"></div><div class="oc-shade-name">Fig</div></div>
+      </div>
+      <div class="oc-price">$18</div>
+    </div>
+  </div>
+</section>
 
-        <div class="sculptural-product-canvas" id="product-canvas-box">
-            <div class="rhode-capsule-sculpture" id="sculpture-unit">
-                <div class="capsule-brand-stamp">rhode</div>
-            </div>
-            <h4 id="canvas-product-title" style="font-family:'Fraunces', serif; font-size:22px; font-weight:300; margin-bottom:8px;">The Sculptural Uniform</h4>
-            <p style="font-size:13px; text-transform:uppercase; letter-spacing:1px; opacity:0.5; font-weight:700;" id="canvas-shade-subtitle">Core Essential Canvas</p>
-        </div>
-    </main>
+<section class="final-panel">
+  <div class="fp-watermark">RHODE</div>
+  <div class="fp-label">Case Study Complete</div>
+  <h2 class="fp-h">GLAZED.<br><span class="blush">REAL.</span><br>YOURS.</h2>
+  <p class="fp-sub">Rhode built a brand on restraint, warmth, and the belief that skincare should feel like something you want to do. Five products. Five frameworks. One feeling.</p>
+  <div class="fp-meta">Email Design Portfolio · Rhode Skin · BRAVO Framework · 2025</div>
+</section>
 
-    <section class="bravo-matrix-strip">
-        <h2 class="matrix-showcase-title">The B.R.A.V.O. Conversion Strategy System Matrix</h2>
-        
-        <div class="bravo-luxury-row">
-            <div class="matrix-initial">B</div>
-            <div class="matrix-content">
-                <h3>Branding: The Sculptural Object</h3>
-                <p>Rejects flashing neon formatting completely for architectural clay, sand, and cream canvas treatments. The physical product housing behaves as structured minimalist art items inside modern living environments.</p>
-            </div>
-        </div>
+<script>
+const obs=new IntersectionObserver(e=>{
+  e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');obs.unobserve(x.target)}})
+},{threshold:0.07});
+document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
 
-        <div class="bravo-luxury-row">
-            <div class="matrix-initial">R</div>
-            <div class="matrix-content">
-                <h3>Reason for Existing: Curated Anti-Complexity</h3>
-                <p>Establishes the ultimate direct operational foundation statement: <em>“One of everything really good.”</em> An editor-in-chief approach that eliminates routine selection fatigue within highly saturated digital cosmetic landscapes.</p>
-            </div>
-        </div>
+let current=0;
+let autoTimer;
+const cards=document.querySelectorAll('.rotator-card');
+const btns=document.querySelectorAll('.rotator-btn');
+const progress=document.getElementById('rotatorProgress');
 
-        <div class="bravo-luxury-row">
-            <div class="matrix-initial">A</div>
-            <div class="matrix-content">
-                <h3>Audience Definition: The Aesthetic Rationalist</h3>
-                <p>Captures demographic layers that crave high-fashion editorial art execution while operating with strict, calculated value caps across automated checkout loops.</p>
-            </div>
-        </div>
+function showProduct(idx){
+  cards[current].classList.remove('active');
+  btns[current].classList.remove('active-btn');
+  current=idx;
+  cards[current].classList.add('active');
+  btns[current].classList.add('active-btn');
+  progress.style.transition='none';
+  progress.style.width='0%';
+  setTimeout(()=>{
+    progress.style.transition='width 4s linear';
+    progress.style.width='100%';
+  },50);
+}
 
-        <div class="bravo-luxury-row">
-            <div class="matrix-initial">V</div>
-            <div class="matrix-content">
-                <h3>Voice Profile: The Intimate Insider</h3>
-                <p>Deploys low-key, confident lowercase text styling paired with rich, sensory operational verbs (<em>"drench," "glaze," "cushion"</em>) to build ironclad long-term narrative retention loops.</p>
-            </div>
-        </div>
+function nextProduct(){showProduct((current+1)%cards.length)}
+function startAuto(){autoTimer=setInterval(nextProduct,4200)}
+function stopAuto(){clearInterval(autoTimer)}
 
-        <div class="bravo-luxury-row">
-            <div class="matrix-initial">O</div>
-            <div class="matrix-content">
-                <h3>Offering Architecture: The Saturated Skincare Uniform</h3>
-                <p>Restricts physical stock catalogs to a tightly controlled core capsule uniform, maximizing day-one Average Order Values via highly integrated bundle packages.</p>
-            </div>
-        </div>
-    </section>
+btns.forEach((btn,i)=>{
+  btn.addEventListener('click',()=>{stopAuto();showProduct(i);startAuto()});
+});
 
-    <footer class="conversion-anchor-panel">
-        <p class="hero-eyebrow" style="color:var(--rhode-ribbon);">The Strategy Conclusion</p>
-        <h2>Ready to Scale Your Conversion Architecture?</h2>
-        <p>This dynamic case study demonstrates how deep positioning theory blends with advanced technical execution to transform plain web text into high-retention brand equity. Let's design premium growth narratives together.</p>
-        <a href="mailto:yourname@email.com" class="premium-interview-trigger">Secure An Interview</a>
-    </footer>
-
-    <script>
-        function shiftTheme(shadeName, primaryColor, subtleBg, dynamicHeadline) {
-            // Update Background Environmental Space Fluidly
-            document.getElementById('lookbook-body').style.backgroundColor = subtleBg;
-            
-            // Shift Sculptural Product Body Tone Instantly
-            const sculpture = document.getElementById('sculpture-unit');
-            sculpture.style.background = primaryColor;
-            
-            // Adjust Subtitle Text Data Fields
-            document.getElementById('canvas-product-title').innerText = 'Peptide Lip Tint';
-            document.getElementById('canvas-shade-subtitle').innerText = 'Shade Variant // ' + shadeName.toUpperCase();
-            document.getElementById('canvas-shade-subtitle').style.color = primaryColor;
-        }
-    </script>
+progress.style.transition='width 4s linear';
+progress.style.width='100%';
+startAuto();
+</script>
 </body>
 </html>
